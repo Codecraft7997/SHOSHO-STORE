@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>SHOSHO STORE - Women</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+background:#111;
+font-family:Arial,sans-serif;
+padding:20px;
+}
+
+h1{
+color:#fff;
+text-align:center;
+margin-bottom:25px;
+}
+
+.gallery{
+columns:3 220px;
+column-gap:16px;
+max-width:1200px;
+margin:auto;
+}
+
+.gallery img{
+width:100%;
+margin-bottom:16px;
+border-radius:18px;
+display:block;
+cursor:pointer;
+transition:.4s;
+box-shadow:0 10px 20px rgba(0,0,0,.4);
+}
+
+.gallery img:hover{
+transform:scale(1.05) rotate(-1deg);
+}
+
+.lightbox{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.9);
+justify-content:center;
+align-items:center;
+z-index:999;
+}
+
+.lightbox img{
+max-width:90%;
+max-height:90%;
+border-radius:20px;
+}
+
+.order{
+position:fixed;
+bottom:20px;
+left:50%;
+transform:translateX(-50%);
+background:#25D366;
+color:#fff;
+text-decoration:none;
+padding:16px 30px;
+border-radius:50px;
+font-size:20px;
+font-weight:bold;
+box-shadow:0 10px 25px rgba(37,211,102,.5);
+transition:.3s;
+}
+
+.order:hover{
+transform:translateX(-50%) scale(1.08);
+}
+
+.back{
+position:fixed;
+top:20px;
+right:20px;
+background:#FFD700;
+color:#000;
+text-decoration:none;
+padding:12px 22px;
+border-radius:30px;
+font-weight:bold;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>SHOSHO STORE</h1>
+
+<div class="gallery">
+<img src="101.jpg">
+<img src="102.jpg">
+<img src="103.jpg">
+<img src="104.jpg">
+<img src="105.jpg">
+<img src="106.jpg">
+<img src="107.jpg">
+<img src="108.jpg">
+<img src="109.jpg">
+<img src="110.jpg">
+<img src="111.jpg">
+<img src="112.jpg">
+<img src=""113.jpg">
+<img src="114.jpg">
+<img src="115.jpg">
+<img src="116.jpg">
+<img src="117.jpg">
+<img src="118.jpg">
+<img src="119.jpg">
+<img src="120.jpg">
+<img src="121.jpg">
+<img src="122.jpg">
+<img src="123.jpg">
+<img src="124.jpg">
+<img src="125.jpg">
+<img src="126.jpg">
+<img src="127.jpg">
+<img src="128.jpg">
+<img src="129.jpg">
+<img src="130.jpg">  
+<img src="131.jpg">
+<img src="132.jpg">
+<img src="133.jpg">
+<img src="134.jpg">
+<img src="135.jpg">
+<img src="136.jpg">
+<img src="137.jpg">
+<img src="138.jpg">
+<img src="139.jpg">
+<img src="140.jpg">  
+<img src="141.jpg">
+<img src="142.jpg">
+<img src="143.jpg">
+<img src="144.jpg">
+<img src="145.jpg">
+<img src="146.jpg">
+<img src="147.jpg">
+<img src="148.jpg">
+<img src="149.jpg">
+<img src="150.jpg">  
+<img src="151.jpg">
+<img src="152.jpg">
+<img src="153.jpg">
+<img src="154.jpg">
+<img src="155.jpg">
+<img src="156.jpg">
+<img src="157.jpg">
+<img src="158.jpg">
+<img src="159.jpg">
+<img src="160.jpg">  
+<img src="161.jpg">
+<img src="162.jpg">
+<img src="163.jpg">
+<img src="164.jpg">
+<img src="165.jpg">
+<img src="166.jpg">
+<img src="167.jpg">
+<img src="168.jpg">
+<img src="169.jpg">
+<img src="170.jpg">  
+<img src="171.jpg">
+<img src="172.jpg">
+<img src="173.jpg">
+<img src="174.jpg">
+<img src="175.jpg">
+<img src="176.jpg">
+<img src="177.jpg">
+<img src="178.jpg">
+<img src="179.jpg">
+<img src="180.jpg">  
+<img src="181.jpg">
+<img src="182.jpg">
+<img src="183.jpg">
+<img src="184.jpg">
+<img src="185.jpg">
+<img src="186.jpg">
+<img src="187.jpg">
+<img src="188.jpg">
+<img src="189.jpg">
+<img src="190.jpg">  
+<img src="191.jpg">
+<img src="192.jpg">
+<img src="193.jpg">
+<img src="194.jpg">
+<img src="195.jpg">
+<img src="196.jpg">
+<img src="197.jpg">
+<img src="198.jpg">
+<img src="199.jpg">
+<img src="200.jpg">  
+<img src="201.jpg">
+<img src="202.jpg">
+<img src="203.jpg">
+<img src="204.jpg">
+<img src="205.jpg">
+<img src="206.jpg">
+<img src="207.jpg">
+<img src="208.jpg">
+<img src="209.jpg">
+<img src="210.jpg">  
+<img src="211.jpg">
+<img src="212.jpg">
+<img src="213.jpg">
+<img src="214.jpg">
+  
+</div>
+
+<div class="lightbox" id="lightbox">
+<img id="preview">
+</div>
+
+<a class="order"
+href="https://wa.me/2012 21968218?text=مرحبًا، أريد طلب هذا المنتج من SHAZOZA STORE"
+target="_blank">
+🛍️ اطلب الآن
+</a>
+
+<script>
+const lightbox=document.getElementById("lightbox");
+const preview=document.getElementById("preview");
+
+document.querySelectorAll(".gallery img").forEach(img=>{
+img.onclick=()=>{
+preview.src=img.src;
+lightbox.style.display="flex";
+}
+});
+
+lightbox.onclick=()=>{
+lightbox.style.display="none";
+}
+</script>
+
+</body>
+</html>

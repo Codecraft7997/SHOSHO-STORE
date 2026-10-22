@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>School Bags | SHO STORE</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+background:#111;
+font-family:Arial,sans-serif;
+}
+
+.gallery{
+width:92%;
+max-width:1300px;
+margin:25px auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:18px;
+}
+
+.gallery img{
+width:100%;
+height:320px;
+object-fit:cover;
+border-radius:20px;
+cursor:pointer;
+transition:.4s;
+box-shadow:0 10px 25px rgba(0,0,0,.45);
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+.lightbox{
+display:none;
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.9);
+justify-content:center;
+align-items:center;
+}
+
+.lightbox img{
+max-width:90%;
+max-height:90%;
+border-radius:20px;
+}
+
+.order{
+position:fixed;
+bottom:20px;
+left:50%;
+transform:translateX(-50%);
+padding:16px 35px;
+background:#25D366;
+color:#fff;
+text-decoration:none;
+border-radius:40px;
+font-size:20px;
+font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>👜 SHOSHO STORE</h1>
+</header>
+
+
+<div class="gallery">
+
+<img src="o1.jpg">
+<img src="o2.jpg">
+<img src="o3.jpg">
+<img src="o4.jpg">
+<img src="o5.jpg">
+<img src="o6.jpg">
+<img src="o7.jpg">
+<img src="o8.jpg">
+<img src="o9.jpg">
+<img src="o10.jpg">
+<img src="o11.jpg">
+<img src="o12.jpg">
+
+</div>
+
+<div class="lightbox" id="lightbox">
+<img id="preview">
+</div>
+
+<a class="order"
+href="https://wa.me/2012 21968218?text=مرحبًا، أريد طلب شنطة مدارس من SHAZOZA STORE"
+target="_blank">
+🛒 اطلب الآن
+</a>
+
+<script>
+const lightbox=document.getElementById("lightbox");
+const preview=document.getElementById("preview");
+
+document.querySelectorAll(".gallery img").forEach(img=>{
+img.onclick=()=>{
+preview.src=img.src;
+lightbox.style.display="flex";
+}
+});
+
+lightbox.onclick=()=>lightbox.style.display="none";
+</script>
+
+</body>
+</html>

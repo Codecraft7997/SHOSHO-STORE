@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SHOSHO STORE - Kids</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#111;
+padding:20px;
+font-family:Arial,sans-serif;
+}
+
+h1{
+text-align:center;
+color:#fff;
+margin-bottom:25px;
+}
+
+.gallery{
+columns:3 220px;
+column-gap:16px;
+max-width:1200px;
+margin:auto;
+}
+
+.gallery img{
+width:100%;
+margin-bottom:16px;
+border-radius:18px;
+display:block;
+cursor:pointer;
+transition:.4s;
+box-shadow:0 10px 20px rgba(0,0,0,.5);
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+.lightbox{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.9);
+justify-content:center;
+align-items:center;
+z-index:999;
+}
+
+.lightbox img{
+max-width:90%;
+max-height:90%;
+border-radius:20px;
+}
+
+.order{
+position:fixed;
+bottom:20px;
+left:50%;
+transform:translateX(-50%);
+background:#25D366;
+color:#fff;
+text-decoration:none;
+padding:16px 30px;
+border-radius:50px;
+font-size:20px;
+font-weight:bold;
+box-shadow:0 10px 25px rgba(37,211,102,.5);
+transition:.3s;
+}
+
+.order:hover{
+transform:translateX(-50%) scale(1.08);
+}
+</style>
+</head>
+
+<body>
+
+<h1>SHOSHO STORE</h1>
+
+<div class="gallery">
+<img src="d1.jpg">
+<img src="d2.jpg">
+<img src="d3.jpg">
+<img src="d4.jpg">
+<img src="d5.jpg">
+<img src="d6.jpg">
+<img src="d7.jpg">
+<img src="d8.jpg">
+<img src="d9.jpg">
+<img src="d10.jpg">
+<img src="d11.jpg">
+<img src="d12.jpg">
+<img src="d13.jpg">
+<img src="d14.jpg">
+<img src="d15.jpg">
+<img src="d16.jpg">
+<img src="d17.jpg">
+<img src="d18.jpg">
+<img src="d19.jpg">
+<img src="d20.jpg">
+<img src="d21.jpg">
+<img src="d22.jpg">
+ <img src="d23.jpg">
+<img src="d24.jpg">
+<img src="d25.jpg">
+<img src="d26.jpg">
+<img src="d27.jpg">
+
+</div>
+
+<div class="lightbox" id="lightbox">
+<img id="preview">
+</div>
+
+<a class="order"
+href="https://wa.me/2012 21968218?text=مرحبًا، أريد طلب هذا المنتج من SHAZOZA STORE"
+target="_blank">
+🛍️ اطلب الآن
+</a>
+
+<script>
+const lightbox=document.getElementById("lightbox");
+const preview=document.getElementById("preview");
+
+document.querySelectorAll(".gallery img").forEach(img=>{
+img.onclick=()=>{
+preview.src=img.src;
+lightbox.style.display="flex";
+}
+});
+
+lightbox.onclick=()=>{
+lightbox.style.display="none";
+}
+</script>
+
+</body>
+</html>

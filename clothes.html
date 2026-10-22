@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>قسم الملابس | SHAZOZA STORE</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Cairo',sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#111,#222,#333);
+color:#fff;
+}
+
+header{
+text-align:center;
+padding:40px 20px;
+background:#000;
+}
+
+header h1{
+color:#FFD700;
+font-size:42px;
+}
+
+header p{
+margin-top:10px;
+color:#ddd;
+}
+
+.container{
+width:90%;
+max-width:1000px;
+margin:50px auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.card{
+display:block;
+text-decoration:none;
+background:#1f1f1f;
+color:#fff;
+padding:40px 20px;
+border-radius:20px;
+text-align:center;
+transition:.4s;
+box-shadow:0 10px 25px rgba(0,0,0,.4);
+}
+
+.card:hover{
+transform:translateY(-10px) scale(1.03);
+box-shadow:0 15px 35px rgba(255,215,0,.5);
+}
+
+.card h2{
+font-size:35px;
+color:#FFD700;
+margin-bottom:15px;
+}
+
+.card p{
+color:#ddd;
+}
+
+.back{
+display:block;
+width:220px;
+margin:40px auto;
+padding:15px;
+text-align:center;
+background:#FFD700;
+color:#000;
+text-decoration:none;
+font-weight:bold;
+border-radius:40px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>👗 قسم الملابس</h1>
+<p>اختر القسم الذي تريد تصفحه</p>
+</header>
+
+<div class="container">
+
+<a href="men.html" class="card">
+<h2>👔 رجالي</h2>
+<p>ملابس رجالية عصرية</p>
+</a>
+
+<a href="women.html" class="card">
+<h2>👗 بناتي</h2>
+<p>فساتين وملابس نسائية</p>
+</a>
+
+<a href="kids.html" class="card">
+<h2>🧒 أطفال</h2>
+<p>ملابس لجميع الأعمار</p>
+</a>
+
+</div>
+
+<a href="store.html" class="back">⬅ رجوع للأقسام</a>
+
+</body>
+</html>

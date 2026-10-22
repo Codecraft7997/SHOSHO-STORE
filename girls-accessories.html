@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>SHOSHO STORE | إكسسوارات بناتي</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Cairo',sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#111,#1b1b1b,#2b2b2b);
+}
+
+header{
+background:#000;
+padding:25px;
+text-align:center;
+}
+
+header h1{
+font-size:40px;
+color:#FFD700;
+}
+
+.gallery{
+width:92%;
+max-width:1300px;
+margin:35px auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:18px;
+}
+
+.gallery img{
+width:100%;
+height:330px;
+object-fit:cover;
+border-radius:20px;
+transition:.4s;
+box-shadow:0 8px 20px #000;
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+.lightbox{
+display:none;
+position:fixed;
+inset:0;
+background:#000e;
+justify-content:center;
+align-items:center;
+}
+
+.lightbox img{
+max-width:90%;
+max-height:90%;
+border-radius:20px;
+}
+
+.order{
+position:fixed;
+bottom:20px;
+left:50%;
+transform:translateX(-50%);
+background:#25D366;
+color:white;
+padding:12px 25px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h1>💎 إكسسوارات بناتي</h1>
+</header>
+
+<div class="gallery">
+<img src="١.jpg">
+<img src="٢.jpg">
+<img src="٣.jpg">
+<img src="٤.jpg">
+<img src="٥.jpg">
+<img src="٦.jpg">
+<img src="٧.jpg">
+<img src="٨.jpg">
+<img src="٩.jpg">
+<img src="١٠.jpg">
+<img src="١١.jpg">
+<img src="١٢.jpg">
+<img src="١٣.jpg">
+<img src="14.jpg">
+<img src="١٤.jpg">  
+ <img src="١٥.jpg">
+<img src="١٦.jpg">
+<img src="١٧.jpg">
+<img src="١٨.jpg">
+<img src="١٩.jpg">
+<img src="٢٠.jpg">
+<img src="٢١.jpg">
+<img src="٢٢.jpg">
+<img src="٢٣.jpg">
+<img src="٢٤.jpg">
+<img src="٢٥.jpg">
+<img src="٢٦.jpg">
+<img src="٢٧.jpg">
+<img src="٢٨.jpg">
+<img src="٢٩.jpg"> 
+<img src="٣٠.jpg">
+<img src="٣١.jpg">
+<img src="٣٢.jpg">
+<img src="٣٣.jpg">
+<img src="٣٤.jpg">
+<img src="٣٥.jpg">
+<img src="٣٦.jpg">
+<img src="٣٧.jpg">
+<img src="٣٨.jpg">
+<img src="٣٩.jpg">
+<img src="٤٠.jpg">
+<img src="٤١.jpg">
+<img src="٤٢.jpg">
+<img src="٤٣.jpg">
+<img src="٤٤.jpg">
+<img src="٤٥.jpg">
+<img src="٤٦.jpg">
+<img src="٤٧.jpg">
+<img src="٤٨.jpg">
+<img src="٤٩.jpg">
+<img src="٥٠.jpg">
+<img src="٥١.jpg">
+<img src="٥٢.jpg">
+<img src="٥٣.jpg">
+<img src="٥٤.jpg">
+<img src="٥٥.jpg">
+  
+</div>
+
+<div class="lightbox" id="lightbox">
+<img id="preview">
+</div>
+
+<a class="order"
+href="https://wa.me/2012 21968218?text=مرحبًا، أريد طلب هذا المنتج من SHAZOZA STORE">
+🛍️ اطلب الآن
+</a>
+
+
+<script>
+let box=document.getElementById("lightbox");
+let img=document.getElementById("preview");
+
+document.querySelectorAll(".gallery img").forEach(x=>{
+x.onclick=()=>{
+img.src=x.src;
+box.style.display="flex";
+}
+});
+
+box.onclick=()=>{
+box.style.display="none";
+}
+</script>
+
+</body>
+</html>

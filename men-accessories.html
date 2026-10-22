@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>SHOSHO STORE | إكسسوارات رجالي</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Cairo',sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#111,#1b1b1b,#2b2b2b);
+}
+
+header{
+background:#000;
+padding:25px;
+text-align:center;
+box-shadow:0 5px 20px rgba(0,0,0,.5);
+}
+
+header h1{
+font-size:35px;
+color:#FFD700;
+}
+
+
+.gallery{
+width:92%;
+max-width:1300px;
+margin:35px auto;
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:18px;
+}
+
+
+.gallery img{
+width:100%;
+height:330px;
+object-fit:cover;
+border-radius:20px;
+
+cursor:pointer;
+transition:.4s;
+
+box-shadow:0 8px 20px #000;
+}
+
+
+.gallery img:hover{
+transform:scale(1.05);
+box-shadow:0 12px 30px rgba(255,215,0,.3);
+}
+
+
+
+.lightbox{
+display:none;
+position:fixed;
+inset:0;
+
+background:rgba(0,0,0,.92);
+
+justify-content:center;
+align-items:center;
+
+z-index:999;
+}
+
+
+.lightbox img{
+max-width:90%;
+max-height:90%;
+border-radius:20px;
+}
+
+
+
+.order{
+
+position:fixed;
+bottom:20px;
+left:50%;
+
+transform:translateX(-50%);
+
+background:#25D366;
+color:white;
+
+padding:12px 25px;
+
+border-radius:50px;
+
+font-size:18px;
+font-weight:bold;
+
+text-decoration:none;
+
+z-index:1000;
+
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<h1>🕶️ إكسسوارات رجالي</h1>
+
+</header>
+
+
+
+<div class="gallery">
+
+<img src="1.jpg">
+<img src="2.jpg">
+<img src="3.jpg">
+<img src="4.jpg">
+<img src="5.jpg">
+<img src="6.jpg">
+<img src="7.jpg">
+<img src="8.jpg">
+<img src="9.jpg">
+<img src="10.jpg">
+<img src="11.jpg">
+<img src="12.jpg">
+<img src="13.jpg">
+<img src="14.jpg">
+<img src="15.jpg">  
+<img src="16.jpg">
+  
+</div>
+
+
+
+<div class="lightbox" id="lightbox">
+
+<img id="preview">
+
+</div>
+
+
+
+<a class="order"
+href="https://wa.me/2012 21968218?text=مرحبًا، أريد طلب هذا المنتج من SHAZOZA STORE"
+target="_blank">
+
+🛍️ اطلب الآن
+
+</a>
+
+
+
+<script>
+
+const lightbox=document.getElementById("lightbox");
+const preview=document.getElementById("preview");
+
+
+document.querySelectorAll(".gallery img").forEach(img=>{
+
+img.onclick=()=>{
+
+preview.src=img.src;
+lightbox.style.display="flex";
+
+}
+
+});
+
+
+lightbox.onclick=()=>{
+
+lightbox.style.display="none";
+
+}
+
+</script>
+
+
+</body>
+</html>
